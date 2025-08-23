@@ -45,6 +45,6 @@ jobs:
       - name: Terraform Validate
         run: terraform validate
       - name: Terraform Plan
-        run: terraform plan -out main.tfplan
+        run: terraform plan -out ./rg/main.tfplan
       - name: Terraform Apply
         run: terraform apply -auto-approve main.tfplan
