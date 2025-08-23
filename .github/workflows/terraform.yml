@@ -40,12 +40,17 @@ jobs:
         run: terraform workspace show
       # Runs a single command using the runners shell
       - name: Terraform Init 
-        run: terraform init ./rg
+        run: terraform init
+        working-directory: ./rg
       - name: Terraform fmt
         run: terraform fmt
+        working-directory: ./rg
       - name: Terraform Validate
         run: terraform validate
+        working-directory: ./rg
       - name: Terraform Plan
-        run: terraform plan ./rg
+        run: terraform plan
+        working-directory: ./rg
       - name: Terraform Apply
-        run: terraform apply -auto-approve ./rg
+        run: terraform apply -auto-approve
+        working-directory: ./rg
