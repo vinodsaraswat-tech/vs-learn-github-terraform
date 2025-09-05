@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "rgname" {
-  name     = var.rg-name
+resource "azurerm_resource_group" "name" {
+  name     = "git-action-rg"
   location = "West Europe"
 }
